@@ -9,12 +9,19 @@ $(document).ready(function (){
 }); //end doc.ready
 
 function reviewForm() {
-  var firstName = $('#firstName').val();
-  var lastName = $('#lastName').val();
+  $('.formContainer').on('submit', function(event) {
+    event.preventDefault();
 
-  var state = $('#state').val();
-  console.log('NAME:', firstName + lastName);
-  console.log('STATE:', state);
+    formObject.firstName = $('#firstName').val();
+    formObject.lastName = $('#lastName').val();
+    formObject.email = $('#email').val();
+    formObject.company = $('#company').val();
+    formObject.title = $('#title').val();
+    formObject.state = $('#state').val();
+    formObject.country = $('#country').val();
+
+    console.log('Object:', formObject);
+  });
 }
 
 function appendForm() {
@@ -40,7 +47,7 @@ function appendForm() {
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Additional Comments</label>' +
-                              '<input class="form-control" id="comments"></input> </div>');
+                              '<textarea class="form-control"></textarea></div>');
   $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
                               'class="btn btn-primary"> Submit </button>');
 }
