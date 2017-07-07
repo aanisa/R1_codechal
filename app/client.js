@@ -1,11 +1,49 @@
+var formObject = {};
 
 $(document).ready(function (){
  console.log('JS Loaded');
 
  appendText();
  appendForm();
-
+ reviewForm();
 }); //end doc.ready
+
+function reviewForm() {
+  var firstName = $('#firstName').val();
+  var lastName = $('#lastName').val();
+
+  var state = $('#state').val();
+  console.log('NAME:', firstName + lastName);
+  console.log('STATE:', state);
+}
+
+function appendForm() {
+  $('.formContainer').prepend('<div class="form-group"> ' +
+                              '<label for=""> First Name </label>' +
+                              '<input class="form-control" id="firstName"></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Last Name </label>' +
+                              '<input class="form-control" id="lastName"></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Email Address </label>' +
+                              '<input class="form-control" id="email"></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Company </label>' +
+                              '<input class="form-control" id="company"></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Title </label>' +
+                              '<input class="form-control" id="title"></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Additional Comments</label>' +
+                              '<input class="form-control" id="comments"></input> </div>');
+  $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
+                              'class="btn btn-primary"> Submit </button>');
+}
 
 
 function appendText() {
@@ -30,34 +68,9 @@ function appendText() {
 
    '<p> Aliquam nec dui porta, aliquam nulla eu, tristique lorem. In convallis magna eu urna viverra,' +
    'a tristique ex malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ' +
-   'cubilia Curae');
+   'cubilia Curae; Phasellus ac est est. Phasellus porta tempus nisi at congue. Quisque ac nunc ac massa' +
+   'consectetur porta. Curabitur at efficitur nulla, in lobortis ipsum. Cras eleifend elit at dui hendrerit,' +
+  'eu molestie augue condimentum. Etiam maximus iaculis nibh, vel lacinia mi suscipit sed. Vestibulum tempus '+
+   'sagittis erat vel maximus. Phasellus dignissim efficitur dapibus.');
 
-}
-
-function appendForm() {
-  $('.formContainer').prepend('<div class="form-group"> ' +
-                              '<label for=""> First Name </label>' +
-                              '<input class="form-control"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Last Name </label>' +
-                              '<input class="form-control"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Email Address </label>' +
-                              '<input class="form-control"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Company </label>' +
-                              '<input class="form-control"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Title </label>' +
-                              '<input class="form-control"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Additional Comments</label>' +
-                              '<input class="form-control"></input> </div>');
-  $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
-                              'class="btn btn-primary"> Submit </button>');
 }
