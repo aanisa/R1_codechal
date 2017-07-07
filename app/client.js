@@ -20,39 +20,44 @@ function appendText() {
   '<p> Sed imperdiet convallis turpis a pellentesque. Aenean facilisis placerat tincidunt.' +
   ' Mauris fermentum magna ac turpis volutpat tempor. Maecenas id fringilla eros, vel molestie lorem.' +
   ' Vivamus scelerisque odio ut tincidunt molestie. Quisque laoreet lorem condimentum fermentum tincidunt.' +
-  ' Fusce fermentum aliquet dolor non dapibus.</p>' );
-  //
-  // '<p> Maecenas nibh ligula, dignissim luctus magna at, sagittis ullamcorper massa.' +
-  // ' In lacinia lorem eget urna semper aliquam vel interdum est. Cras fermentum interdum pulvinar.' +
-  // ' Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer elementum ligula non condimentum vehicula.' +
-  // ' In pellentesque arcu ut mollis finibus. Donec eget felis sapien. Nunc non felis tristique, '
-  // + 'elementum magna et, ultricies massa.</p>'
+  ' Fusce fermentum aliquet dolor non dapibus.</p>' +
+
+  '<p> Maecenas nibh ligula, dignissim luctus magna at, sagittis ullamcorper massa.' +
+  ' In lacinia lorem eget urna semper aliquam vel interdum est. Cras fermentum interdum pulvinar.' +
+  ' Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer elementum ligula non condimentum vehicula.' +
+  ' In pellentesque arcu ut mollis finibus. Donec eget felis sapien. Nunc non felis tristique, ' +
+   'elementum magna et, ultricies massa.</p>'  +
+
+   '<p> Aliquam nec dui porta, aliquam nulla eu, tristique lorem. In convallis magna eu urna viverra,' +
+   'a tristique ex malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ' +
+   'cubilia Curae');
 
 }
 
 function appendForm() {
   $('.formContainer').prepend('<div class="form-group"> ' +
                               '<label for=""> First Name </label>' +
-                              '<input></input>' +
+                              '<input class="form-control"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Last Name </label>' +
-                              '<input></input>' +
+                              '<input class="form-control"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Email Address </label>' +
-                              '<input></input>' +
+                              '<input class="form-control"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Company </label>' +
-                              '<input></input>' +
+                              '<input class="form-control"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Title </label>' +
-                              '<input></input>' +
+                              '<input class="form-control"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Additional Comments</label>' +
-                              '<input></input> </div>');
-  $('.formContainer').append('<button type="submit" class="btn btn-primary"> Submit </button>');
+                              '<input class="form-control"></input> </div>');
+  $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
+                              'class="btn btn-primary"> Submit </button>');
 }
