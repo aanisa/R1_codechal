@@ -1,12 +1,11 @@
 $(document).ready(function (){
  console.log('JS Loaded');
 
-
-$('textArea').append(function(){
-  
-});
-
-
-
+ appendText();
 
 }); //end doc.ready
+
+
+function appendText() {
+  $('.textArea').append('<p>Lorum Impsum Text To Go Here ~ 3 paragraphs</p>');
+}
