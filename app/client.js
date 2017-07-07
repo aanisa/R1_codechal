@@ -1,6 +1,4 @@
-var countries = require('countries.html');
 
-console.loh(countries);
 $(document).ready(function (){
  console.log('JS Loaded');
 
@@ -33,18 +31,28 @@ function appendText() {
 }
 
 function appendForm() {
-  $('.formContainer').append('<input placeholder="First name"></input>' +
-                              '<input placeholder="Last name"></input>' +
-                              '<input placeholder="Email address"></input>' +
-                              '<input placeholder="Company"></input>' +
-                              '<input placeholder="Title"></input>' +
-                              '<select>' +
-                              '<option value="">Please Select</option>' +
-                              '<select>' +
-                              '<select>' +
-                              '<option value="">Please Select</option>' +
-                              '<select>' +
-                              '<input placeholder="additional comments"></input>' +
-                              '<button> </button>'
-  );
+  $('.formContainer').prepend('<div class="form-group"> ' +
+                              '<label for=""> First Name </label>' +
+                              '<input></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Last Name </label>' +
+                              '<input></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Email Address </label>' +
+                              '<input></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Company </label>' +
+                              '<input></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Title </label>' +
+                              '<input></input>' +
+                              '</div>' +
+                              '<div class="form-group"> ' +
+                              '<label for=""> Additional Comments</label>' +
+                              '<input></input> </div>');
+  $('.formContainer').append('<button type="submit" class="btn btn-primary"> Submit </button>');
 }

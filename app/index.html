@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RL Code Challenge</title>
 
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
@@ -30,14 +31,25 @@
   <img src="assets/imgs/R1_Logo_Horizontal.png" alt="R1 Logo">
   <img src="assets/imgs/laundrybanner.jpg" alt="banner">
 
-
+<div class="container">
   <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 textArea">
+    <div class="col-sm-6 col-md-6 textArea">
     </div>
 
-    <div class="col-xs-6 col-sm-6 col-md-6 ">
+    <div class="col-sm-6 col-md-6 ">
       <form class="formContainer">
-
+        <div class="form-group">
+          <label for=""> State </label>
+          <select class="state" name="">
+            <option value="">Please Select</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for=""> Country</label>
+          <select class="country" name="">
+            <option value="">Please Select</option>
+          </select>
+        </div>
       </form>
     </div>
   </div>
@@ -47,6 +59,8 @@
 
     </div>
   </div>
+</div>
+
 
   </body>
 </html>

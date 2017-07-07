@@ -2,3 +2,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+[class*=' col-'] {
+  padding: 20px;
+  padding-left: 50px;
+}
