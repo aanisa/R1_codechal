@@ -9,10 +9,11 @@ img {
 
 .sub-btn {
   text-align: center;
+  margin-top: 15px;
 }
 
 .summaryText {
-  background-color: rgba(174, 207, 212, 0.74);
+  background-color: rgba(162, 195, 209, 0.85);
   text-align: center;
   padding: 20px;
 }

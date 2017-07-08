@@ -29,11 +29,11 @@ function submitForm(element, object) {
 function formSummary(element) {
   $(element).append('<div class="summaryText">' +
                     '<h2 id="summaryTitle"> Form Summary </h2>' +
-                    '<p>' + formObject.firstName + formObject.lastName + '</p>' +
+                    '<p>' + formObject.firstName + ' ' + formObject.lastName + '</p>' +
                     '<p>' + formObject.email + '</p>' +
                     '<p>' + formObject.company + formObject.title + '</p>' +
                     '<p>' + formObject.comments + '</p>' +
-                    '<p>' + formObject.state + ',' + formObject.country +'</p>' +
+                    '<p>' + formObject.state + ', ' + formObject.country +'</p>' +
                     '</div>' );
   emptyInputFields();
 }
