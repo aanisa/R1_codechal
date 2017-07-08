@@ -1,23 +1,13 @@
 var formObject = {};
 
 $(document).ready(function (){
- console.log('JS Loaded');
 
  appendText();
  appendForm();
  submitForm('.formContainer', formObject);
+
 }); //end doc.ready
 
-function emptyInputFields() {
-  $('#firstName').val('');
-  $('#lastName').val('');
-  $('#email').val('');
-  $('#company').val('');
-  $('#title').val('');
-  $('#comments').val('');
-  $('#state').val('');
-  $('#country').val('');
-}
 
 function submitForm(element, object) {
   $(element).on('submit', function(event) {
@@ -32,16 +22,36 @@ function submitForm(element, object) {
     object.state = $('#state').val();
     object.country = $('#country').val();
 
-    reviewForm('.formReview');
+    formSummary('.formReview');
   });
 }
 
-function reviewForm(element) {
+function formSummary(element) {
   console.log('Object:', formObject.firstName);
 
-  $(element).append('<p> formObject.firstName </p>');
-
+  $(element).append('<div> <h2> Form Summary </h2> </div>' +
+                    '<div>' +
+                    '<p>'+formObject.firstName +'</p>' +
+                    '<p>'+formObject.lastName +'</p>' +
+                    '<p>'+formObject.email +'</p>' +
+                    '<p>'+formObject.company +'</p>' +
+                    '<p>'+formObject.title +'</p>' +
+                    '<p>'+formObject.comments +'</p>' +
+                    '<p>'+formObject.state +'</p>' +
+                    '<p>'+formObject.country +'</p>' +
+                    '</div>' );
   emptyInputFields();
+}
+
+function emptyInputFields() {
+  $('#firstName').val('');
+  $('#lastName').val('');
+  $('#email').val('');
+  $('#company').val('');
+  $('#title').val('');
+  $('#comments').val('');
+  $('#state').val('');
+  $('#country').val('');
 }
 
 function appendForm() {
