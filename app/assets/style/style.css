@@ -10,3 +10,13 @@ img {
 .sub-btn {
   text-align: center;
 }
+
+.summaryText {
+  background-color: rgba(174, 207, 212, 0.74);
+  text-align: center;
+  padding: 20px;
+}
+
+#summaryTitle {
+  font-size: 30px;
+}

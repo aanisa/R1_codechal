@@ -22,23 +22,18 @@ function submitForm(element, object) {
     object.state = $('#state').val();
     object.country = $('#country').val();
 
-    formSummary('.formReview');
+    formSummary('.formSummary');
   });
 }
 
 function formSummary(element) {
-  console.log('Object:', formObject.firstName);
-
-  $(element).append('<div> <h2> Form Summary </h2> </div>' +
-                    '<div>' +
-                    '<p>'+formObject.firstName +'</p>' +
-                    '<p>'+formObject.lastName +'</p>' +
-                    '<p>'+formObject.email +'</p>' +
-                    '<p>'+formObject.company +'</p>' +
-                    '<p>'+formObject.title +'</p>' +
-                    '<p>'+formObject.comments +'</p>' +
-                    '<p>'+formObject.state +'</p>' +
-                    '<p>'+formObject.country +'</p>' +
+  $(element).append('<div class="summaryText">' +
+                    '<h2 id="summaryTitle"> Form Summary </h2>' +
+                    '<p>' + formObject.firstName + formObject.lastName + '</p>' +
+                    '<p>' + formObject.email + '</p>' +
+                    '<p>' + formObject.company + formObject.title + '</p>' +
+                    '<p>' + formObject.comments + '</p>' +
+                    '<p>' + formObject.state + ',' + formObject.country +'</p>' +
                     '</div>' );
   emptyInputFields();
 }
@@ -78,6 +73,7 @@ function appendForm() {
                               '<div class="form-group"> ' +
                               '<label for=""> Additional Comments</label>' +
                               '<textarea class="form-control" id="comments"></textarea></div>');
+
   $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
                               'class="btn btn-primary"> Submit </button>');
 }
