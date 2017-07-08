@@ -18,9 +18,9 @@ function submitForm(element, object) {
     object.email = $('#email').val();
     object.company = $('#company').val();
     object.title = $('#title').val();
-    object.comments = $('#comments').val();
     object.state = $('#state').val();
     object.country = $('#country').val();
+    object.comments = $('#comments').val();
 
     formSummary('.formSummary');
   });
@@ -32,8 +32,8 @@ function formSummary(element) {
                     '<p>' + formObject.firstName + ' ' + formObject.lastName + '</p>' +
                     '<p>' + formObject.email + '</p>' +
                     '<p>' + formObject.company +  ', '  +formObject.title + '</p>' +
-                    '<p>' + formObject.comments + '</p>' +
                     '<p>' + formObject.state + ', ' + formObject.country +'</p>' +
+                    '<p>' + formObject.comments + '</p>' +
                     '</div>' );
   emptyInputFields();
 }
@@ -44,9 +44,9 @@ function emptyInputFields() {
   $('#email').val('');
   $('#company').val('');
   $('#title').val('');
-  $('#comments').val('');
   $('#state').val('');
   $('#country').val('');
+  $('#comments').val('');
 }
 
 function appendForm() {
@@ -69,12 +69,12 @@ function appendForm() {
                               '<div class="form-group"> ' +
                               '<label for=""> Title </label>' +
                               '<input class="form-control" id="title"></input>' +
-                              '</div>' +
-                              '<div class="form-group"> ' +
-                              '<label for=""> Additional Comments</label>' +
-                              '<textarea class="form-control" id="comments"></textarea></div>');
+                              '</div>');
 
-  $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
+  $('.formContainer').append('<div class="form-group"> ' +
+                             '<label for=""> Additional Comments</label>' +
+                             '<textarea class="form-control" id="comments"></textarea></div>' +
+                             '<div class="sub-btn"><button type="submit"' +
                               'class="btn btn-primary"> Submit </button>');
 }
 

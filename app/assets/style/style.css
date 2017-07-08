@@ -21,8 +21,9 @@ img {
   background-color: rgba(162, 195, 209, 0.34);
   text-align: center;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 #summaryTitle {
-  font-size: 30px;
+  font-size: 25px;
 }
