@@ -3,17 +3,22 @@ img {
     height: auto;
 }
 
-[class*=' col-'] {
-  padding: 20px;
+/*[class*=' col-'] {
+  padding-left: 20px;
+  padding-right: 20px;
+}*/
+.textArea {
+  padding-right: 50px;
 }
-
+.container {
+  margin-top: 30px;
+}
 .sub-btn {
   text-align: center;
-  margin-top: 15px;
 }
 
 .summaryText {
-  background-color: rgba(162, 195, 209, 0.85);
+  background-color: rgba(162, 195, 209, 0.34);
   text-align: center;
   padding: 20px;
 }

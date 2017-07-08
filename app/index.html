@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RL Code Challenge</title>
 
-    <link rel="stylesheet" href="vendors/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style/style.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RL Code Challenge</title>
 
-    <script type="text/javascript" src="vendors/jquery.min.js"></script>
-    <script type="text/javascript" src="client.js"></script>
+  <link rel="stylesheet" href="vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style/style.css">
 
-  </head>
+  <script type="text/javascript" src="vendors/jquery.min.js"></script>
+  <script type="text/javascript" src="client.js"></script>
 
+</head>
 
-    <!--
-      GOAL:
-      once submit - show form summary in div below
-      responsive design using media queries + bootstrap
-     -->
-
-
-  <body>
+<body>
   <img src="assets/imgs/R1_Logo_Horizontal.png" alt="R1 Logo">
   <img src="assets/imgs/laundrybanner.jpg" alt="banner">
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-md-6 textArea">
-    </div>
-    <div class="col-sm-6 col-md-6 ">
-      <form class="formContainer">
-        <div class="form-group">
-          <label for=""> State </label>
-          <select class="form-control" id="state">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 textArea">
+      </div>
+      <div class="col-sm-6 col-md-6 ">
+        <form class="formContainer">
+          <div class="form-group">
+            <label for=""> State </label>
+            <select class="form-control" id="state">
             <option value="">Please Select</option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
@@ -87,11 +80,11 @@
             <option value="Wyoming">Wyoming</option>
             <option value="District of Columbia">District of Columbia</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for=""> Country</label>
-          <select class="country form-control" id="country">
-            <option value="Please select">Please select</option>
+          </div>
+          <div class="form-group">
+            <label for=""> Country</label>
+            <select class="country form-control" id="country">
+            <option value="">Please select</option>
             <option value="United States">United States</option>
             <option value="United Kingdom">United Kingdom
             </option>
@@ -375,18 +368,20 @@
             <option value="Zimbabwe">Zimbabwe</option>
 
           </select>
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <hr width="70%">
+
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 formSummary">
+      </div>
     </div>
   </div>
-<hr width="70%">
-  <div class="row">
-    <div class="col-md-offset-2 col-md-8 formSummary">
-
-    </div>
-  </div>
-</div>
 
 
-  </body>
+</body>
+
 </html>
