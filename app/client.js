@@ -5,23 +5,43 @@ $(document).ready(function (){
 
  appendText();
  appendForm();
- reviewForm();
+ submitForm('.formContainer', formObject);
 }); //end doc.ready
 
-function reviewForm() {
-  $('.formContainer').on('submit', function(event) {
+function emptyInputFields() {
+  $('#firstName').val('');
+  $('#lastName').val('');
+  $('#email').val('');
+  $('#company').val('');
+  $('#title').val('');
+  $('#comments').val('');
+  $('#state').val('');
+  $('#country').val('');
+}
+
+function submitForm(element, object) {
+  $(element).on('submit', function(event) {
     event.preventDefault();
 
-    formObject.firstName = $('#firstName').val();
-    formObject.lastName = $('#lastName').val();
-    formObject.email = $('#email').val();
-    formObject.company = $('#company').val();
-    formObject.title = $('#title').val();
-    formObject.state = $('#state').val();
-    formObject.country = $('#country').val();
+    object.firstName = $('#firstName').val();
+    object.lastName = $('#lastName').val();
+    object.email = $('#email').val();
+    object.company = $('#company').val();
+    object.title = $('#title').val();
+    object.comments = $('#comments').val();
+    object.state = $('#state').val();
+    object.country = $('#country').val();
 
-    console.log('Object:', formObject);
+    reviewForm('.formReview');
   });
+}
+
+function reviewForm(element) {
+  console.log('Object:', formObject.firstName);
+
+  $(element).append('<p> formObject.firstName </p>');
+
+  emptyInputFields();
 }
 
 function appendForm() {
@@ -47,7 +67,7 @@ function appendForm() {
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Additional Comments</label>' +
-                              '<textarea class="form-control"></textarea></div>');
+                              '<textarea class="form-control" id="comments"></textarea></div>');
   $('.formContainer').append('<div class="sub-btn"><button type="submit"' +
                               'class="btn btn-primary"> Submit </button>');
 }
