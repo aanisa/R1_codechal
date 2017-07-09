@@ -24,6 +24,7 @@ function submitForm(element, object) {
     object.comments = $('#comments').val();
 
     formSummary('.formSummary');
+    window.location = 'index.html#summary';
   });
 }
 
