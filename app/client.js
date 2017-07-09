@@ -1,18 +1,19 @@
+//object to store form responses
 var formObject = {};
 
 $(document).ready(function (){
-
  appendText();
  appendForm();
  submitForm('.formContainer', formObject);
-
 }); //end doc.ready
 
 
 function submitForm(element, object) {
   $(element).on('submit', function(event) {
+    //prevent page reload to default
     event.preventDefault();
 
+    //store all input values in object
     object.firstName = $('#firstName').val();
     object.lastName = $('#lastName').val();
     object.email = $('#email').val();
@@ -26,6 +27,7 @@ function submitForm(element, object) {
   });
 }
 
+//display form values in a summary div
 function formSummary(element) {
   $(element).append('<div class="summaryText">' +
                     '<h2 id="summaryTitle"> Form Summary </h2>' +
@@ -38,6 +40,7 @@ function formSummary(element) {
   emptyInputFields();
 }
 
+//empty all input fields in form
 function emptyInputFields() {
   $('#firstName').val('');
   $('#lastName').val('');
