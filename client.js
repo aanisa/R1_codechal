@@ -5,6 +5,7 @@ $(document).ready(function (){
  appendText();
  appendForm();
  submitForm('.formContainer', formObject);
+
 }); //end doc.ready
 
 
@@ -23,8 +24,13 @@ function submitForm(element, object) {
     object.country = $('#country').val();
     object.comments = $('#comments').val();
 
+    //Use serialize to retreive all input field values instead of the above method
+    var queryForm = $('.formContainer').serialize();
+    console.log('SERIALIZE', queryForm);
+
     formSummary('.formSummary');
     window.location = 'index.html#summary';
+
   });
 }
 
@@ -56,7 +62,7 @@ function emptyInputFields() {
 function appendForm() {
   $('.formContainer').prepend('<div class="form-group"> ' +
                               '<label for=""> First Name </label>' +
-                              '<input class="form-control" id="firstName"></input>' +
+                              '<input name="firstName" class="form-control" id="firstName"></input>' +
                               '</div>' +
                               '<div class="form-group"> ' +
                               '<label for=""> Last Name </label>' +
